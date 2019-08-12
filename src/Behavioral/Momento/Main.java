@@ -1,6 +1,13 @@
+/**
+ * 
+ * @author Steve Lévesque
+ * @GitHub steve-levesque
+ * 
+ */
+
 package Behavioral.Momento;
 
-public class Main {
+class Main {
 	public static void main(String[] args) {
 		Originator draftReport = new DraftReport();
 		draftReport.setVariable("Old", "This is a old report", 1);
