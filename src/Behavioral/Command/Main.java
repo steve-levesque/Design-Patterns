@@ -1,39 +1,15 @@
+/**
+ * 
+ * @author Steve Lévesque
+ * @GitHub steve-levesque
+ * 
+ */
+
 package Behavioral.Command;
 
 import java.util.ArrayList;
 
-interface Calendar {
-	void Appointment();
-}
-
-class Evening implements Calendar {
-
-	@Override
-	public void Appointment() {
-		System.out.println("Breakfast with friend1");
-	}
-	
-}
-
-class Day implements Calendar {
-
-	@Override
-	public void Appointment() {
-		System.out.println("Dinner with friend2");
-	}
-	
-}
-
-class Night implements Calendar {
-
-	@Override
-	public void Appointment() {
-		System.out.println("Supper with friend3");
-	}
-	
-}
-
-public class Command {
+public class Main {
 	public static ArrayList<Calendar> calendar = new ArrayList<Calendar>();
 	
 	public static void addAppointments() {
