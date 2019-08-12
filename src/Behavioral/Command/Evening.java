@@ -7,7 +7,7 @@
 
 package Behavioral.Command;
 
-public class Evening implements Calendar {
+class Evening implements Calendar {
 
 	@Override
 	public void Appointment() {

@@ -9,7 +9,7 @@ package Behavioral.Command;
 
 import java.util.ArrayList;
 
-public class Main {
+class Main {
 	public static ArrayList<Calendar> calendar = new ArrayList<Calendar>();
 	
 	public static void addAppointments() {

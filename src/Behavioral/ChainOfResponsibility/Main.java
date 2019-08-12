@@ -7,7 +7,7 @@
 
 package Behavioral.ChainOfResponsibility;
 
-public class Main {
+class Main {
 	public static void main(String[] args) {
 		int[] types = {100, 20, 10, 5, 1};
 		int withdraw = 5432;

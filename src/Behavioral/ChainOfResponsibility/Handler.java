@@ -7,7 +7,7 @@
 
 package Behavioral.ChainOfResponsibility;
  
-public class Handler {
+class Handler {
 	int unit;
 	Handler nextHandler;
 	

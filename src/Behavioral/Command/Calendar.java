@@ -7,6 +7,6 @@
 
 package Behavioral.Command;
 
-public interface Calendar {
+interface Calendar {
 	void Appointment();
 }
