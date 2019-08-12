@@ -1,15 +1,19 @@
 package Creational.Singleton;
 
-public final class Singleton {
+class Company {
     private String ceoName;
-    private static Singleton instance = null; 
+    private static Company instance = null; 
 	
-	private Singleton() {}
+	private Company() {}
 	
-	public static Singleton addCEO(String ceoName) {
+	public static Company addCEO(String ceoName) {
 		if (instance == null)  {
-			instance = new Singleton(); 
+			instance = new Company(); 
 			instance.ceoName = ceoName;
+			System.out.println("No CEO in the company, "+ceoName+" is now the CEO.");
+		}
+		else {
+			System.out.println(ceoName+" can't be the CEO since "+ instance.ceoName + " is already occuping the post.");
 		}
   
         return instance; 
@@ -21,13 +25,5 @@ public final class Singleton {
 
 	public void setCeoName(String ceoName) {
 		this.ceoName = ceoName;
-	}
-    
-    public static void main(String[] args) {
-		Singleton ceo1 = Singleton.addCEO("Steve");
-		Singleton ceo2 = Singleton.addCEO("Somoene");
-    	
-    	System.out.println(ceo1.getCeoName());
-    	System.out.println(ceo2.getCeoName());
 	}
 }
