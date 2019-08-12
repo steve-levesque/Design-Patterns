@@ -1,6 +1,13 @@
+/**
+ * 
+ * @author Steve Lévesque
+ * @GitHub steve-levesque
+ * 
+ */
+
 package Behavioral.Visitor;
 
-public class Main {
+class Main {
 	public static void main(String[] args) {
 		Visitor inspector = new Inspector();
 		
