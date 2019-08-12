@@ -1,3 +1,10 @@
+/**
+ * 
+ * @author Steve Lévesque
+ * @GitHub steve-levesque
+ * 
+ */
+
 package Creational.AbstractFactory;
 
 //Application specifing what kind of report to produce
