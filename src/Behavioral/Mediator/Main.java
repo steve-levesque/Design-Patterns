@@ -1,6 +1,13 @@
+/**
+ * 
+ * @author Steve Lévesque
+ * @GitHub steve-levesque
+ * 
+ */
+
 package Behavioral.Mediator;
 
-public class Main {
+class Main {
 	public static void main(String[] args) {
 		PunchClockSystem clock = new PunchClockSystem();
 		
