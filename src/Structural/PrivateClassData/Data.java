@@ -1,3 +1,10 @@
+/**
+ * 
+ * @author Steve Lévesque
+ * @GitHub steve-levesque
+ * 
+ */
+
 package Structural.PrivateClassData;
 
 class Data {
@@ -6,9 +13,7 @@ class Data {
 	private int age;
 	private int experience;
 	
-	Data(String name) {
-		this.name = name;
-	}
+	Data() { }
 	
 	public String getName() {
 		return name;
@@ -33,25 +38,5 @@ class Data {
 	}
 	public void setExperience(int experience) {
 		this.experience = experience;
-	}
-}
-
-class MainClass {
-	private Data data;
-	
-	MainClass() {
-		data = new Data("From Data Class");
-	}
-	
-	public String getName() {
-		return data.getName();
-	}
-}
-
-public class PrivateClassData {
-	
-	public static void main(String[] args) {
-		MainClass data = new MainClass();
-		System.out.println(data.getName());
 	}
 }
