@@ -7,6 +7,12 @@
 
 package Structural.PrivateClassData;
 
-interface Employee {
-	String getName();
+abstract class Employee {
+	protected Data data;
+
+	Employee(String name) {
+		data = new Data(name);
+	}
+	
+	abstract void getName();
 }
