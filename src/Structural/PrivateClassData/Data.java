@@ -6,6 +6,7 @@
  */
 
 package Structural.PrivateClassData;
+// Encapsulation of attributes and limitation of visibility.
 
 class Data {
 	private String name;
