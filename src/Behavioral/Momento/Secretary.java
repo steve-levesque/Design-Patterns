@@ -6,6 +6,9 @@
  */
 
 package Behavioral.Momento;
+// The Caretaker manages the safe state methods and keeps all versions of
+// momento for future backups. Normally, the only state changing method
+// available to the caretaker is the setter from the originator.
 
 class Secretary {
 	private Momento version;

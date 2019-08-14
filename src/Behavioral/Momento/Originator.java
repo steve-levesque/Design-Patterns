@@ -6,6 +6,8 @@
  */
 
 package Behavioral.Momento;
+//The originator can make the snapshot on its own to keep
+//the state private from other objects (createVersion();). 
 
 abstract class Originator {
 	protected String title, text;
