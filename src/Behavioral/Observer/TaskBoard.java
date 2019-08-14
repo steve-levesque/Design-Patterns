@@ -5,14 +5,14 @@
  * 
  */
 
-package Behavioral.Observer;
+package Behavioral.Observer; 
 
 class TaskBoard {
-	private Notification event;
+	private Notifier event;
 	private Card card;
 	
 	TaskBoard() {
-		this.event = new Notification();
+		this.event = new Notifier();
 	}
 	
 	public void createCard(String name) {
@@ -25,11 +25,11 @@ class TaskBoard {
 		event.notifyBoard("finish", card.getName());
 	}
 
-	public Notification getEvent() {
+	public Notifier getEvent() {
 		return event;
 	}
 
-	public void setEvent(Notification event) {
+	public void setEvent(Notifier event) {
 		this.event = event;
 	}
 }
