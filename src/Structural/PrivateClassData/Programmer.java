@@ -7,15 +7,13 @@
 
 package Structural.PrivateClassData;
 
-class Programmer implements Employee {
-	private Data data;
+class Programmer extends Employee {
 	
-	Programmer() {
-		data = new Data();
-		data.setName("Programmer1");
+	Programmer(String name) {
+		super(name);
 	}
 	
-	public String getName() {
-		return data.getName();
+	public void getName() {
+		System.out.println(this.data.getName()+" is a programmer.");
 	}
 }
