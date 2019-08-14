@@ -18,8 +18,7 @@ public class CompanyInformation {
 		confidentialInformations.add("secret2");
 	}
 	
-	// Iterator created inside the data class to avoid potential leaks
-	// possible with getters and setters.
+	// Iterator created inside the data class to avoid potential data leaks with getters and setters.
 	class InformationIterator {
 		private CompanyInformation companyInformation;
 		
