@@ -6,6 +6,15 @@
  */
 
 package Behavioral.ChainOfResponsibility;
+// The chain of responsibility or chain of command suggests that your application's 
+// execution steps should be separated into different parts (handlers) and then aligned
+// in the needed order creating a chain.
+
+// Pros :
+// - Modular code.
+// - Easy handler additional implementation and dynamic order.
+// Cons : 
+// - May add code complexity and be time consuming for cases with very few steps and low needs of new implementations.
 
 class Main {
 	public static void main(String[] args) {
