@@ -6,7 +6,7 @@
  */
 
 package Behavioral.State;
-
+// The main class contains the state and uses its methods instead of its own.
 class Computer {
 	private ComputerState state;
 	
