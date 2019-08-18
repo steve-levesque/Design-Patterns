@@ -6,6 +6,8 @@
  */
 
 package Behavioral.TemplateMethod;
+// The super class contains the execution steps as well as identical 
+// steps from all sub classes.
 
 abstract class Employee {
 	
