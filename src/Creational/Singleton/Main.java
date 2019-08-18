@@ -6,6 +6,8 @@
  */
 
 package Creational.Singleton;
+// The singleton suggests that a program that needs to reuse the same object a relatively high
+// number of times should prevent any new initializations and give back the object in question.
 
 class Main {
     public static void main(String[] args) {

@@ -11,8 +11,11 @@ class Company {
     private String ceoName;
     private static Company instance = null; 
 	
+    // Private constructor to prevent creation of a new object since it's the
+    // contructor's default behavior by design towards object creation.
 	private Company() {}
 	
+	// Static method used instead to make the evaluation possible.
 	public static Company addCEO(String ceoName) {
 		if (instance == null)  {
 			instance = new Company(); 
