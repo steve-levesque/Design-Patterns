@@ -15,7 +15,7 @@ class Programmer extends Employee {
 
 	@Override
 	public void talkToInspector(Visitor visitor) {
-		visitor.visitProgrammer(this);
+		visitor.visit(this);
 	}
 	
 }
