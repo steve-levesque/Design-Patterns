@@ -20,7 +20,7 @@ class InputAdapter implements Employee {
 	}
 	
 	@Override
-	public void input(String name, Experience experience) {
+	public void input(String name, Input experience) {
 		if (programmer != null) {
 			programmer.input(name, experience.getEducation(), experience.getProjectCount());
 		}

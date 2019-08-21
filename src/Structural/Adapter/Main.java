@@ -6,23 +6,28 @@
  */
 
 package Structural.Adapter;
+// The adapter suggests to wrap one or multiple objects which has complicated or unsupported
+// operations between them with a class, an adapter, to simplify the work and bring together similarities. 
+
+// Pros :
+// - The old code doesn't need and even know the adapter implementation, it only receives what it needs.
+// Cons : 
+// - If the objects differences are relatively small, building a whole wrapper around a huge group of
+//   objects might not be worth.
 
 public class Main {
 	public static void main(String[] args) {
-		// Before the adapter.
-		System.out.println("Old input.");
-		Programmer p = new Programmer();
-		Experience pe = new Experience("College", 0, 1);
-		p.input("Steve", pe.getEducation(), pe.getProjectCount());
+		Input pe = new Input("College", 0, 1);
+		Input se = new Input("Secondary School", 10, 0);
 		
-		// Different parameters must be passed.
+		Programmer p = new Programmer();
 		Secretary s = new Secretary();
-		Experience se = new Experience("Secondary School", 10, 0);
+		
+		// Those 2 objects doesn't use the Input in the same way.
+		p.input("Steve", pe.getEducation(), pe.getProjectCount());
 		s.input("Someone", se.getEducation(), se.getYearExperience());
 		
-		
-		// After the implementation of the adapter.
-		System.out.println("Adapter input");
+		// An adapter would make the Input work perfectly with both objects.
 		Employee ap = new InputAdapter(new Programmer());
 		Employee as = new InputAdapter(new Secretary());
 		
