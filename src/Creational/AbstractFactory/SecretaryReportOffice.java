@@ -7,7 +7,7 @@
 
 package Creational.AbstractFactory;
 
-class SecretaryReportOffice implements ReportOffice {
+class SecretaryReportOffice extends ReportOffice {
 
 	@Override
 	public void content() {

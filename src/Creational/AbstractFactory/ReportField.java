@@ -7,6 +7,6 @@
 
 package Creational.AbstractFactory;
 
-interface ReportField {
-	void content();
+abstract class ReportField implements Report {
+	public abstract void content();
 }
