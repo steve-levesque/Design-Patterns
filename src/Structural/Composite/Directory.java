@@ -11,13 +11,13 @@ import java.util.ArrayList;
 
 class Directory implements Content {
 	private String name;
-    private ArrayList<Object> files = new ArrayList<Object>();
+    private ArrayList<Content> files = new ArrayList<Content>();
     
     Directory(String name) {
     	this.name = name;
     }
     
-    public void add(Object object) {
+    public void add(Content object) {
     	files.add(object);
     }
 
@@ -25,10 +25,9 @@ class Directory implements Content {
 	public void display(int counter) {
 		System.out.println(counter+"--|"+name+"|--");
 		counter++;
-		for (Object file : files) {
-			Content result = (Content) file;
+		for (Content file : files) {
+			Content result = file;
 			result.display(counter);
 		}
-		
 	}
 }
