@@ -6,6 +6,7 @@
  */
 
 package Structural.Facade;
+// Forces the user to use the friendly methods.
 
 interface Panel {
 	Employee findEmployeeByName(String name);
