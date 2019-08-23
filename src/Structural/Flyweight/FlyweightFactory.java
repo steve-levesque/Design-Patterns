@@ -6,6 +6,8 @@
  */
 
 package Structural.Flyweight;
+// The factory class retains all the flyweight object and is in charge of using/saving them
+// properly when normal objects are passed inside the methods.
 
 import java.util.ArrayList;
 

@@ -6,6 +6,8 @@
  */
 
 package Structural.Flyweight;
+// Retained intrinsic object parts are saved in a flyweight object which
+// is contained in the flyweight factory to evaluate the future operations. 
 
 class FlyweightObject {
 	private Project projectState;
