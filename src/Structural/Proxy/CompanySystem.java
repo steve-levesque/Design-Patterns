@@ -7,20 +7,20 @@
 
 package Structural.Proxy;
 
-import java.util.ArrayList;
-
-class CompanySystem {
-	private ArrayList<Secretary> employees = new ArrayList<Secretary>();
+class CompanySystem implements Manager {
+	private String message;
 	
-	public CompanySystem() {}
-	
-	public void addEmployee(Secretary employee) {
-		this.employees.add(employee);
+	public CompanySystem() {
+		message = "Default message from system sent.";
 	}
 	
-	public void isFiredFromSystem(Secretary secretary) {
-		if (employees.contains(secretary)) {
-			secretary.isNowFired();
-		}
+	@Override
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+	@Override
+	public void sendMessage() {
+		System.out.println(message);
 	}
 }

@@ -6,24 +6,28 @@
  */
 
 package Structural.Proxy;
+// The proxy suggests to delegate some of the work, before or after the contact with the main class
+// to the proxy class. Both should implement the same interface to avoid distinction from
+// the application. 
+
+// Pros :
+// - The application doesn't know about which one between the main class and
+//   the proxy class is used.
+// Cons :
+// - If the behavior from the proxy is relatively simple, its whole implementation
+//   could be more difficult than just adding an addition to the main class.
 
 class Main {
 	public static void main(String[] args) {
-		CompanySystem company = new CompanySystem();
-		Secretary secretary = new Secretary();
-		company.addEmployee(secretary);
-		secretary.setName("Someone");
-		System.out.println(secretary.getIsFired());
+		Manager system = new CompanySystem();
+		Manager secretary = new SecretaryProxy(system, "Secretary1");
 		
-		// Tell the employee that he is fired directly.
-		secretary.isNowFired();
+		// If the proxy isn't solicited, the main class does the work.
+		system.sendMessage();
+		secretary.sendMessage();
 		
-		System.out.println(secretary.getIsFired());
-		secretary.setIsFired(false);
-		System.out.println(secretary.getIsFired());
-		
-		// Use the proxy (the company system) to change the employee's state.
-		company.isFiredFromSystem(secretary);
-		System.out.println(secretary.getIsFired());
+		// Else, the proxy will take care of it.
+		secretary.setMessage("New message");
+		secretary.sendMessage();
 	}
 }
