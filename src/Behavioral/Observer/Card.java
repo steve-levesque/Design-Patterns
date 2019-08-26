@@ -6,6 +6,7 @@
  */
 
 package Behavioral.Observer;
+// Part of the TaskBoard to trigger events.
 
 class Card {
 	private String name;

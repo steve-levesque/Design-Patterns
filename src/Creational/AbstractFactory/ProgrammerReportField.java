@@ -7,7 +7,7 @@
 
 package Creational.AbstractFactory;
 
-class ProgrammerReportField implements ReportField {
+class ProgrammerReportField extends ReportField {
 
 	@Override
 	public void content() {

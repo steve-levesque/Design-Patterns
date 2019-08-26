@@ -7,10 +7,15 @@
 
 package Structural.Decorator;
 
-class BarDisplay implements Graphic {
+class BarDisplay extends Decorator {
 	
+	BarDisplay(Graphic graphic) {
+		super(graphic);
+	}
+
 	@Override
 	public void show() {
+		graphic.show();
 		System.out.println("Bar Charts:");
 		System.out.println(" _  - _  -     - || ");
 		System.out.println(" || - || -  _  - || ");

@@ -8,5 +8,5 @@
 package Structural.Adapter;
 
 interface Employee {
-	void input(String name, Experience experience);
+	void input(String name, Input experience);
 }

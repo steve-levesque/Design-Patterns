@@ -7,6 +7,6 @@
 
 package Creational.AbstractFactory;
 
-interface ReportOffice {
-	void content();
+abstract class ReportOffice implements Report {
+	public abstract void content();
 }

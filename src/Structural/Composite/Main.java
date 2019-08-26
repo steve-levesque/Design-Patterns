@@ -6,6 +6,16 @@
  */
 
 package Structural.Composite;
+// The composite suggests to implement a common interface for all items included
+// in the tree to successfully do the work without needing to know the full
+// iteration levels or any other unknown details.
+
+// Pros :
+// - The work can be completed without having to think beforehand of the levels of iteration,
+//   the type of the object or any other critical information.
+// Cons :
+// - The interface needs to be implemented in all participating sub classes, which can be complicated 
+//   if there are too much differences between them.
 
 class Main {
 	public static void main(String[] args) {
@@ -28,6 +38,7 @@ class Main {
 		d3.add(f6);
 		d1.add(d3);
 		
+		// This methods will trigger independently of the class' nature and the tree's depth.
 		d1.display(0);
 	}
 }

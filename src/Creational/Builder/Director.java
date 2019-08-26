@@ -6,6 +6,8 @@
  */
 
 package Creational.Builder;
+// This class is optional, but helps reduce code and structure building steps
+// into quick and simple methods.
 
 class Director {
 	private Builder builder;

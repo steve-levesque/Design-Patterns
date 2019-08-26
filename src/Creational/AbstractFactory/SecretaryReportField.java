@@ -7,7 +7,7 @@
 
 package Creational.AbstractFactory;
 
-class SecretaryReportField implements ReportField {
+class SecretaryReportField extends ReportField {
 
 	@Override
 	public void content() {

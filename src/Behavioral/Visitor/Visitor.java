@@ -8,6 +8,6 @@
 package Behavioral.Visitor;
 
 interface Visitor {
-	void visitProgrammer(Programmer programmer);
-	void visitSecretary(Secretary secretary);
+	void visit(Programmer programmer);
+	void visit(Secretary secretary);
 }

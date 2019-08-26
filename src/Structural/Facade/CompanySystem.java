@@ -6,14 +6,16 @@
  */
 
 package Structural.Facade;
+// This class gives the user friendly and simple methods instead of
+// having to write the complicated code each time.
 
 import java.util.ArrayList;
 
-class Company implements Panel {
+class CompanySystem implements Panel {
 	private ArrayList<Employee> employees;
 	private ArrayList<Computer> computers;
 	
-	Company(ArrayList<Employee> employees, ArrayList<Computer> computers) {
+	CompanySystem(ArrayList<Employee> employees, ArrayList<Computer> computers) {
 		this.employees = employees;
 		this.computers = computers;
 	}

@@ -7,12 +7,12 @@
 
 package Structural.Adapter;
 
-class Experience {
+class Input {
 	private String education;
 	private int yearExperience;
 	private int projectCount;
 	
-	Experience(String education, int yearExperience, int projectCount) {
+	Input(String education, int yearExperience, int projectCount) {
 		this.education = education;
 		this.yearExperience = yearExperience;
 		this.projectCount = projectCount;

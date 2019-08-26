@@ -6,6 +6,7 @@
  */
 
 package Creational.Builder;
+// this class replaces the exhaustive construction of the object.
 
 class ComputerBuilder implements Builder {
 	private Computer computer;

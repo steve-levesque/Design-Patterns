@@ -6,22 +6,30 @@
  */
 
 package Creational.Prototype;
+// The prototype suggests to clone an object from within the actual one instead of trying to replicate
+// it manually (initialization and copy/pasting of the object's values). Since fields can be private,
+// manual cloning would result in an incomplete object. 
 
-import java.util.ArrayList;
+// Pros :
+// - Reduces coupling between the original class and the clone.
+// Cons :
+// - Each class that needs to support object cloning must implement the cloning logic or
+//   have a super class that possess it.
 
 public class Main {
-	static ArrayList<Employee> employees = new ArrayList<Employee>();
-	
-	static {
-		employees.add(new Secretary("prototype secretary"));
-		employees.add(new Clerk("prototype clerk"));
-	}
-	
-	
 	public static void main(String[] args) {		
-		System.out.println(employees.get(0).getName());
+		// Multiple cloning.
+		Prototype prototype = new Prototype();
 		
-		for (int i = 0; i <= 10; i++)
-			System.out.println(employees.get(0).clone().getName());
+		prototype.addEmployee(new Secretary("original secretary"));
+		prototype.addEmployee(new Clerk("original clerk"));
+		
+		prototype.getEmployeeNames();
+		prototype.cloneAll(2);
+		
+		// Single object cloning.
+		Secretary secretary = new Secretary("Secertary1");
+		Employee clone = secretary.clone();
+		System.out.println(clone.getName());
 	}
 }

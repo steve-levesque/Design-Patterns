@@ -9,10 +9,10 @@ package Behavioral.Observer;
 
 import java.util.HashMap;
 
-class Notification {
+class Notifier {
 	private HashMap<String, Event> listeners;
 	
-	Notification() {
+	Notifier() {
 		listeners = new HashMap<String, Event>();
 	}
 	

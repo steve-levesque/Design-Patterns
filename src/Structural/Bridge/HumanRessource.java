@@ -6,6 +6,7 @@
  */
 
 package Structural.Bridge;
+// This class is elected as the main category, it contains the second category.
 
 abstract class HumanRessource {
 	private String name;

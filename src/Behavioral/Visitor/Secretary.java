@@ -15,7 +15,7 @@ class Secretary extends Employee {
 
 	@Override
 	public void talkToInspector(Visitor visitor) {
-		visitor.visitSecretary(this);
+		visitor.visit(this);
 	}
 	
 }

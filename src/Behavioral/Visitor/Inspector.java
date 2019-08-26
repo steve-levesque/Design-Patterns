@@ -6,17 +6,18 @@
  */
 
 package Behavioral.Visitor;
+// All methods are implemented in the visitor class instead of the actual class.
 
 class Inspector implements Visitor {
 
 	@Override
-	public void visitProgrammer(Programmer programmer) {
+	public void visit(Programmer programmer) {
 		if (programmer.getWorkHours() < 20)
 			System.out.println("Work more on the projects.");
 	}
 
 	@Override
-	public void visitSecretary(Secretary secretary) {
+	public void visit(Secretary secretary) {
 		if (secretary.getWorkHours() > 40)
 			System.out.println("Switch off with a coworker.");
 	}

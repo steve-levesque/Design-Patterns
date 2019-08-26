@@ -6,25 +6,21 @@
  */
 
 package Creational.FactoryMethod;
+// The Factory Method suggests to initialize an object from a factory which may return
+// altered behaviors depending of the sub class it uses instead of using direct initialization.
+
+// Pros :
+// - Reduces coupling between types of logistics.
+// - The application in question does not need to know any specific sub classes to work.
+// Cons :
+// - All sub classes needs to extend/implement the same base class used by the factory/application.
 
 class Main {
-	private static Secretary secretary;
-	
-	public static void initialize() throws Exception {
-		String workplace = "Field";
-				
-		if (workplace == "Office")
-			secretary = new SecretaryOffice();
-		else if (workplace == "Field")
-			secretary = new SecretaryField();
-		else
-			throw new Exception("Workplace not supported by the secretaries to provide reports.");
-			
-	}
-	
 	public static void main(String[] args) throws Exception {
-		initialize();
+		Secretary secretary1 = new Factory().initialize("Field");
+		Secretary secretary2 = new Factory().initialize("Office");
 		
-		secretary.report();
+		secretary1.report();
+		secretary2.report();
 	}
 }

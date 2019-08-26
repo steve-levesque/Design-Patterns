@@ -6,6 +6,8 @@
  */
 
 package Behavioral.Momento;
+// The momento keeps a copy of his originator and trigger the setter
+// with its encapsulated values.
 
 abstract class Momento {
 	protected String title, text;
