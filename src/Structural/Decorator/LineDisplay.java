@@ -7,10 +7,15 @@
 
 package Structural.Decorator;
 
-class LineDisplay implements Graphic {
+class LineDisplay extends Decorator {
+
+	LineDisplay(Graphic graphic) {
+		super(graphic);
+	}
 
 	@Override
 	public void show() {
+		graphic.show();
 		System.out.println("Line Charts:");
 		System.out.println(" _       | ");
 		System.out.println(" ||__   |  ");
