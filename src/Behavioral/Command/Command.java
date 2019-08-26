@@ -1,3 +1,10 @@
+/**
+ * 
+ * @author Steve Lévesque
+ * @GitHub steve-levesque
+ * 
+ */
+
 package Behavioral.Command;
 
 import java.util.ArrayList;
